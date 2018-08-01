@@ -28,4 +28,9 @@ Cinema.prototype.checkIfFilmsMeetMinimumLength = function (minimumLength) {
   return this.films.every((film) => film.length > minimumLength);
 };
 
+Cinema.prototype.getTotalMovieMinutes = function () {
+  const movieMinutes = (total, film) => total + film.length;
+  return this.films.reduce(movieMinutes, 0);
+};
+
 module.exports = Cinema;

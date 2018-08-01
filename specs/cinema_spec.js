@@ -54,7 +54,10 @@ describe('Cinema', function () {
 
   });
 
-  it('should be able to check whether all films are over a particular length');
+  it('should be able to check whether all films are over a particular length', function(){
+    const total = cinema.getTotalMovieMinutes();
+    assert.strictEqual(total, 622)
+  });
 
   it('should be able to calculate total running time of all films');
 
