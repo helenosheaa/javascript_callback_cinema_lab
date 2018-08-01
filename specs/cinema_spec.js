@@ -49,17 +49,21 @@ describe('Cinema', function () {
   });
 
   it('should be able to check whether there are no films from a particular year', function(){
+    const result = cinema.checkIfFilmsForYearExist(1999);
+    assert.strictEqual(result, false)
+
+  });
+
+  it('should be able to check whether all films are over a particular length', function(){
     const result = cinema.checkIfFilmsMeetMinimumLength(95);
     assert.strictEqual(result, true)
 
   });
 
-  it('should be able to check whether all films are over a particular length', function(){
+  it('should be able to calculate total running time of all films', function(){
     const total = cinema.getTotalMovieMinutes();
     assert.strictEqual(total, 622)
   });
-
-  it('should be able to calculate total running time of all films');
 
 });
 
