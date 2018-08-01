@@ -48,9 +48,11 @@ describe('Cinema', function () {
     assert.strictEqual(result, true)
   });
 
+  it('should be able to check whether there are no films from a particular year', function(){
+    const result = cinema.checkIfFilmsMeetMinimumLength(95);
+    assert.strictEqual(result, true)
 
-
-  it('should be able to check whether there are no films from a particular year');
+  });
 
   it('should be able to check whether all films are over a particular length');
 

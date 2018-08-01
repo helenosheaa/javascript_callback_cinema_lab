@@ -24,5 +24,8 @@ Cinema.prototype.checkIfFilmsForYearExist = function (yearToCheck) {
   return this.films.some((film) => film.year === yearToCheck);
 }
 
+Cinema.prototype.checkIfFilmsMeetMinimumLength = function (minimumLength) {
+  return this.films.every((film) => film.length > minimumLength);
+};
 
 module.exports = Cinema;
