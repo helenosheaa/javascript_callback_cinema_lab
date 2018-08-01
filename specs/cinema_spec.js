@@ -43,7 +43,12 @@ describe('Cinema', function () {
     assert.deepStrictEqual(filmsOfGenre.length, 2);
   });
 
-  it('should be able to check whether there are some films from a particular year');
+  it('should be able to check whether there are some films from a particular year', function(){
+    const result = cinema.checkIfFilmsForYearExist(2017);
+    assert.strictEqual(result, true)
+  });
+
+
 
   it('should be able to check whether there are no films from a particular year');
 
