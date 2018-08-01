@@ -33,4 +33,9 @@ Cinema.prototype.getTotalMovieMinutes = function () {
   return this.films.reduce(movieMinutes, 0);
 };
 
+Cinema.prototype.filterFilmsByProperty = function (property, propertyValue) {
+  const filmsWithProperty = this.films.filter(film => film[property] === propertyValue);
+  return filmsWithProperty;
+};
+
 module.exports = Cinema;

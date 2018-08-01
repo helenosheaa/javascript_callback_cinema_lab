@@ -65,6 +65,11 @@ describe('Cinema', function () {
     assert.strictEqual(total, 622)
   });
 
+  it("should be able to filter films by property", function () {
+    const filmsWithProperty = cinema.filterFilmsByProperty("year", 2018);
+    assert.strictEqual(filmsWithProperty.length, 1)
+  })
+
 });
 
 module.exports = Cinema;
