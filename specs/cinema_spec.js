@@ -39,7 +39,7 @@ describe('Cinema', function () {
   });
 
   it('should be able to filter films by genre', function() {
-    const filmsOfGenre = cinema.filterByGenre("drama");
+    const filmsOfGenre = cinema.filterFilmsByProperty("genre", "drama");
     assert.deepStrictEqual(filmsOfGenre.length, 2);
   });
 
